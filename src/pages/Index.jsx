@@ -1,14 +1,21 @@
-// Update this page (the content is just a fallback if you fail and example)
+import React from "react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 const Index = () => {
   return (
     <div className="h-screen w-screen flex items-center justify-center">
-      {/* Update with components here - default to put new layout sections as separate components in the components folder, and import them here */}
-      <div>
-        <h1 className="text-3xl text-center">Your Blank Canvas</h1>
-        <p className="text-center">
-          Chat with the agent to start making edits.
-        </p>
+      <div className="text-center">
+        <h1 className="text-4xl mb-4">Welcome to Flash Card App</h1>
+        <p className="mb-8">Create, edit, and manage your flash card decks with ease.</p>
+        <div className="space-x-4">
+          <Link to="/create-deck">
+            <Button variant="outline">Create Deck</Button>
+          </Link>
+          <Link to="/view-decks">
+            <Button variant="outline">View Decks</Button>
+          </Link>
+        </div>
       </div>
     </div>
   );
